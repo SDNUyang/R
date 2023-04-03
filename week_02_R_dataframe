@@ -114,3 +114,14 @@ names(scores)[scores>60]
 rm(l)
 rm(df1,df2)
 rm(list = ls()) 
+
+
+
+# 练习3-1
+# 1.读取exercise.csv这个文件，赋值给test。
+test<-read.csv("exercise.csv")  #读取的时候括号内表格文件需要加引号
+test
+# 2.求test第一列数值的中位数
+median(test[,1])
+# 3.筛选test中，Species列的值为a或c的行
+test[test$Species=="a"|test$Species=="c",]
